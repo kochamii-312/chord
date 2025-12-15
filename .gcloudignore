@@ -1,0 +1,10 @@
+# gcloud が自動で無視してほしいものたち
+.gcloudignore
+.git
+.gitignore
+
+
+/models/*
+/pages/images_and_tasks.py
+/pages/pre-experiment.py
+/pages/00_simple_firestore_save.py

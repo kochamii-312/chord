@@ -1,0 +1,17 @@
+{
+  "instruction": "あれをちょっと横にずらして",
+  "clarifying_steps": [
+    {
+      "llm_question": "『あれ』とはどの物を指していますか？",
+      "question_label": "insufficient",
+      "user_answer": "青い箱です"
+    },
+    {
+      "llm_question": "『横』とは右側ですか、左側ですか？",
+      "question_label": "sufficient",
+      "user_answer": "右側です"
+    }
+  ],
+  "final_answer": "青い箱を右に移動します",
+  "label": "sufficient"
+}

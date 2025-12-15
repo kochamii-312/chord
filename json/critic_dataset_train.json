@@ -1,0 +1,814 @@
+[
+  {
+    "instruction": "隣の部屋にある蜜蜂という本を取ってきて",
+    "function_sequence": "<move_to>next_room</move_to>\n  <detect_object>蜜蜂</detect_object>",
+    "clarifying_history": [],
+    "information": "- 現在はリビングにいます。\n- 近くにテーブルが1つ、棚がありますが、どちらにも本がないようです。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "隣の部屋にある蜜蜂という本を取ってきて",
+    "function_sequence": "<move_to>next_room</move_to>\n  <detect_object>蜜蜂</detect_object>",
+    "clarifying_history": [],
+    "information": "- 現在はリビングにいます。\n- 近くにテーブルが1つ、棚がありますが、どちらにも本がないようです。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "隣の部屋にある蜜蜂という本を取ってきて",
+    "function_sequence": "<move_to>BEDROOM</move_to>\n  <detect_object>蜜蜂</detect_object>",
+    "clarifying_history": [],
+    "information": "- 現在はベッドルームに移動しました。\n- ナイトスタンドが1つあり、本が5冊置かれています。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "隣の部屋にある蜜蜂という本を取ってきて",
+    "function_sequence": "<move_to room_name=\"adjacent room\" />\n  <detect_object object=\"蜜蜂\" />",
+    "clarifying_history": [],
+    "information": "- 現在、リビングにいます。\n- 隣の部屋に『蜜蜂』という本があります。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "部屋をきれいにしといて",
+    "function_sequence": "<pick_object object=\"ストール\" />\n  <place_object_on target=\"coffee table\" />",
+    "clarifying_history": [],
+    "information": "<li>ストールを4つ折りにしてコーヒーテーブルの上に置きました。</li>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "お風呂のお湯を40℃でためて",
+    "function_sequence": "<move_to>bathroom</move_to>\n  <detect_object>bathtub</detect_object>",
+    "clarifying_history": [],
+    "information": "- User wants to push the heating button next to the bathtub to boil water at 40°C.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "お風呂のお湯を40℃でためて",
+    "function_sequence": "<move_to>bathroom</move_to>\n  <detect_object>heating button</detect_object>\n  <pick_object>heating button</pick_object>",
+    "clarifying_history": [],
+    "information": "- User described the heating button as square and plastic.",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "バスタブの掃除をお願い",
+    "function_sequence": "<move_to room_name=\"bathroom\"/>\n  <detect_object object=\"bathtub\"/>",
+    "clarifying_history": [],
+    "information": "<li>ユーザーはバスタブの掃除を依頼しています。</li>\n  <li>現在、リビングにいます。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "バスタブの掃除をお願い",
+    "function_sequence": "<move_to room_name=\"bathroom\"/>\n  <detect_object object=\"bathtub\"/>",
+    "clarifying_history": [],
+    "information": "<li>ユーザーはバスタブのわきにある洗剤とスポンジを使うように指示しました。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "バスタブの掃除をお願い",
+    "function_sequence": "<move_to room_name=\"bathroom\"/>\n  <detect_object object=\"cleaning supplies\"/>\n  <pick_object object=\"cleaning supplies\"/>\n  <detect_object object=\"sponge\"/>\n  <pick_object object=\"sponge\"/>",
+    "clarifying_history": [],
+    "information": "<li>ユーザーは洗剤とスポンジがバスタブのわきにあることを確認しました。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "バスタブの掃除をお願い",
+    "function_sequence": "<move_to room_name=\"bathroom\"/>\n  <detect_object object=\"cleaning supplies\"/>\n  <detect_object object=\"sponge\"/>",
+    "clarifying_history": [],
+    "information": "<li>ユーザーは洗剤とスポンジがバスタブのわきにあることを確認しました。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "バスタブの掃除をお願い",
+    "function_sequence": "<move_to room_name=\"bathroom\"/>\n  <detect_object object=\"cleaning supplies\"/>\n  <pick_object object=\"cleaning supplies\"/>\n  <detect_object object=\"sponge\"/>\n  <pick_object object=\"sponge\"/>\n  <place_object_on target=\"bathtub\"/>",
+    "clarifying_history": [],
+    "information": "<li>ユーザーは洗剤が一つしか置いていないと伝えました。</li>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"一番小さいタオル\"/>\n  <detect_object object=\"鏡\"/>\n  <place_object_on target=\"鏡\"/>",
+    "clarifying_history": [],
+    "information": "- Robot will pick up the smallest towel from the bottom shelf of the towel rack in the bathroom.\n  - Proceeding to clean the mirror afterward.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to>Bathroom</move_to>\n  <detect_object>mirror</detect_object>\n  <pick_object>cloth</pick_object>\n  <place_object_on>mirror</place_object_on>",
+    "clarifying_history": [],
+    "information": "- User requested to clean the mirror at the washbasin.\n  - Currently in the LIVING room.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to>Bathroom</move_to>\n  <detect_object>mirror</detect_object>\n  <pick_object>cloth</pick_object>\n  <place_object_on>mirror</place_object_on>",
+    "clarifying_history": [],
+    "information": "- User confirmed that the mirror is dirty.\n  - Preparing to clean the mirror in the bathroom.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to>Bathroom</move_to>\n  <pick_object>small towel</pick_object>\n  <move_to>mirror</move_to>\n  <place_object_on>mirror</place_object_on>",
+    "clarifying_history": [],
+    "information": "- User indicated the small towel is on the bottom shelf of the towel rack.\n  - Plan to pick up the towel and clean the mirror.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to>Bathroom</move_to>\n  <pick_object>small towel</pick_object>\n  <move_to>mirror</move_to>\n  <place_object_on>mirror</place_object_on>\n  <detect_object>clean mirror</detect_object>",
+    "clarifying_history": [],
+    "information": "- Proceeding to get the small towel to clean the mirror.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to>Bathroom</move_to>\n  <pick_object>small towel</pick_object>\n  <move_to>mirror</move_to>\n  <place_object_on>mirror</place_object_on>\n  <detect_object>water</detect_object>\n  <use_object>small towel</use_object>",
+    "clarifying_history": [],
+    "information": "- Cleaning the mirror with water and the small towel.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "洗面台の鏡を拭いておいて",
+    "function_sequence": "<move_to>Bathroom</move_to>\n  <pick_object>small towel</pick_object>\n  <move_to>mirror</move_to>\n  <place_object_on>mirror</place_object_on>\n  <detect_object>water</detect_object>\n  <use_object>small towel</use_object>",
+    "clarifying_history": [],
+    "information": "- Cleaning the mirror with water and the small towel.",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "シャンプーとコンディショナーの残量を確認して",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"シャンプー\"/>\n  <detect_object object=\"コンディショナー\"/>",
+    "clarifying_history": [],
+    "information": "- 現在、リビングのソファの近くにいます。\n  - シャンプーとコンディショナーの残量を確認します。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "シャンプーとコンディショナーの残量を確認して",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <detect_object object=\"シャンプー\"/>\n  <detect_object object=\"コンディショナー\"/>",
+    "clarifying_history": [],
+    "information": "- 現在、バスルームに移動しました。\n  - シャンプーとコンディショナーを確認します。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "シャンプーとコンディショナーの残量を確認して",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <detect_object object=\"シャンプー\"/>\n  <detect_object object=\"コンディショナー\"/>",
+    "clarifying_history": [],
+    "information": "- バスタブの中にボトルがあることを確認しました。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "シャンプーとコンディショナーの残量を確認して",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"シャンプー\"/>\n  <pick_object object=\"コンディショナー\"/>",
+    "clarifying_history": [],
+    "information": "- バスタブの中にシャンプーとコンディショナーのボトルが2つあることを確認しました。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "シャンプーとコンディショナーの残量を確認して",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"シャンプー\"/>\n  <place_object_next_to target=\"コンディショナー\"/>\n  <pick_object object=\"コンディショナー\"/>\n  <place_object_next_to target=\"シャンプー\"/>\n  <move_to room_name=\"LIVING ROOM\"/>",
+    "clarifying_history": [],
+    "information": "- シャンプーとコンディショナーをバスルームでそれぞれ拾いました。\n  - LIVING ROOMに戻ります。",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\" />\n  <pick_object object=\"new towel\" />\n  <place_object_on target=\"shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>棚がLIVINGルームにあります。</li>\n  <li>タオルを棚に補充するために移動する必要があります。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\" />\n  <pick_object object=\"new towel\" />\n  <pick_object object=\"new towel\" />\n  <place_object_on target=\"shelf\" />\n  <place_object_on target=\"shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>2枚のタオルを棚に補充する計画です。</li>\n  <li>棚はLIVINGルームにあり、他に物は置いていない状態です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\" />\n  <pick_object object=\"2 new towels\" />\n  <place_object_on target=\"shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>持っているタオルは2枚です。</li>\n  <li>タオルを棚に補充する準備が整いました。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\" />\n  <pick_object object=\"2 new towels\" />\n  <place_object_on target=\"shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>棚に補充するタオルは2枚です。</li>\n  <li>タオルは現在あなたが持っている状態です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\" />\n  <pick_object object=\"2 new towels\" />\n  <place_object_on target=\"shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>持っているタオルは2枚です。</li>\n  <li>棚はLIVINGルームにあり、現在他に物は置いていない状態です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"BATHROOM\" />\n  <pick_object object=\"2 new towels\" />\n  <place_object_on target=\"towel shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>BATHROOMにタオル棚があります。</li>\n  <li>タオルをその上に置く計画です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"BATHROOM\" />\n  <pick_object object=\"2 new towels\" />\n  <place_object_behind target=\"towel shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>BATHROOMのタオル棚には既にタオルが置かれています。</li>\n  <li>新しいタオルをタオル棚の後ろに置く計画です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"BATHROOM\" />\n  <pick_object object=\"2 new towels\" />\n  <place_object_on target=\"towel shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>BATHROOMにタオル棚があります。</li>\n  <li>棚には既にタオルが置いてあります。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\" />\n  <pick_object object=\"2 new towels from user\" />\n  <move_to room_name=\"BATHROOM\" />\n  <place_object_on target=\"towel shelf\" />",
+    "clarifying_history": [],
+    "information": "<li>LIVINGルームでユーザーからタオルを受け取ります。</li>\n  <li>その後、BATHROOMに移動して、タオル棚の上に置きます。</li>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "新しいタオルを棚に補充してくれる？",
+    "function_sequence": "<move_to room_name=\"BATHROOM\" />\n  <pick_object object=\"floor mat\" />\n  <move_to room_name=\"LAUNDRY\" />\n  <place_object_on target=\"washing machine\" />",
+    "clarifying_history": [],
+    "information": "<li>BATHROOMにフロアマットがあります。</li>\n  <li>それを洗濯機に入れる計画です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"洗濯機\"/>\n  <pick_object object=\"フロアマット\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>フロアマットを洗濯機に入れる指示があります。</li>\n  <li>現在、リビングにいます。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"洗濯機\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>白色のフロアマットを洗濯機に入れる指示があります。</li>\n  <li>現在、リビングにいます。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>白色のフロアマットはバスルームに置いてあります。</li>\n  <li>バスルームへ移動してフロアマットを洗濯機に入れる手順を計画中です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>白色のフロアマットはバスルームの床の上にあります。</li>\n  <li>現在、バスルームに移動し、フロアマットを洗濯機に入れる手順を実行中です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <move_to room_name=\"洗濯機の場所\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>白色のフロアマットはバスルームの床の上にあり、洗濯機はバスタブのわきにあります。</li>\n  <li>洗濯機の位置に移動してフロアマットを洗濯機に入れる手順を計画中です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"LAUNDRY\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>白色のフロアマットはバスルームの床の上にあり、洗濯機はLAUNDRYにあります。</li>\n  <li>LAUNDRYに移動してフロアマットを洗濯機に入れる手順を実行中です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"LAUNDRY\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>白色のフロアマットはバスルームの床の上にあります。</li>\n  <li>LAUNDRYでの洗濯機にフロアマットを入れる手順を計画しています。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <move_to room_name=\"LAUNDRY\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>最初にBATHROOMに移動して白色のフロアマットを取り、その後LAUNDRYに移動します。</li>\n  <li>フロアマットを洗濯機に入れる手順を実行中です。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "フロアマットを洗濯機に入れておいて",
+    "function_sequence": "<move_to room_name=\"BATHROOM\"/>\n  <pick_object object=\"白色のフロアマット\"/>\n  <move_to room_name=\"LAUNDRY\" step=\"注意: 段差を乗り越える\"/>\n  <place_object_in target=\"洗濯機\"/>",
+    "clarifying_history": [],
+    "information": "<li>BATHROOMから出ると段差がありますが、まっすぐ行けば大丈夫です。</li>\n  <li>白色のフロアマットを洗濯機に入れる手順を実行中です。</li>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "お風呂上りに、浴室乾燥機をつけておいて",
+    "function_sequence": "<move_to room_name=\"浴室\"/>\n  <detect_object object=\"浴室乾燥機\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>浴室にいる。</li>\n    <li>浴室乾燥機を操作する必要がある。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "お風呂上りに、浴室乾燥機をつけておいて",
+    "function_sequence": "<move_to room_name=\"浴室\"/>\n  <detect_object object=\"浴室乾燥機\"/>\n  <pick_object object=\"浴室乾燥機のボタン\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>浴室から出てすぐのところに乾燥機のボタンがある。</li>\n    <li>浴室乾燥機を操作する必要がある。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "お風呂上りに、浴室乾燥機をつけておいて",
+    "function_sequence": "<move_to room_name=\"浴室\"/>\n  <detect_object object=\"浴室乾燥機\"/>\n  <pick_object object=\"浴室乾燥機のボタン\"/>\n  <place_object_on target=\"浴室乾燥機のボタン\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>浴室から出てすぐのところに乾燥機のボタンがある。</li>\n    <li>浴室乾燥機のボタンを押す準備ができた。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "お風呂上りに、浴室乾燥機をつけておいて",
+    "function_sequence": "<move_to room_name=\"浴室\"/>\n  <detect_object object=\"浴室乾燥機\"/>\n  <pick_object object=\"浴室乾燥機のボタン\"/>\n  <place_object_on target=\"浴室乾燥機のボタン\"/>\n  <detect_object object=\"タイマー\"/>\n  <pick_object object=\"タイマー\"/>\n  <place_object_on target=\"タイマー\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>乾燥機を2時間動かす。</li>\n    <li>タイマーの設定を必要とする。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "お風呂上りに、浴室乾燥機をつけておいて",
+    "function_sequence": "<move_to room_name=\"浴室\"/>\n  <detect_object object=\"浴室乾燥機\"/>\n  <pick_object object=\"浴室乾燥機のボタン\"/>\n  <place_object_on target=\"浴室乾燥機のボタン\"/>\n  <pick_object object=\"浴室乾燥機のボタン\"/>\n  <place_object_on target=\"浴室乾燥機のボタン\"/>\n  <pick_object object=\"浴室乾燥機のボタン\"/>\n  <place_object_on target=\"浴室乾燥機のボタン\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>浴室乾燥機のボタンを3回押して2時間の設定を行う。</li>\n    <li>乾燥機が作動する。</li>\n  </ul>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "室温を25℃に設定して",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>",
+    "clarifying_history": [],
+    "information": "- 現在、リビングにいます。\n- 他の情報が不足しています。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "室温を25℃に設定して",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"エアコン\"/>",
+    "clarifying_history": [],
+    "information": "- 現在、リビングにいます。\n- エアコンの設定を25℃にしたいです。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "室温を25℃に設定して",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"リモコン\"/>",
+    "clarifying_history": [],
+    "information": "- リビングの天井にエアコンがあります。\n- テーブルの上にリモコンがあると予想しています。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "室温を25℃に設定して",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"リモコン\"/>",
+    "clarifying_history": [],
+    "information": "- リビングのテーブルはベージュ寄りの白色です。\n- テーブルの上にリモコンを探す必要があります。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "室温を25℃に設定して",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"リモコン\"/>\n  <pick_object object=\"リモコン\"/>\n  <place_object_on target=\"テーブル\"/>",
+    "clarifying_history": [],
+    "information": "- リモコンを見つけたら、冷房ボタンを押してから温度変更ボタンを操作します。\n- エアコンの温度を25℃に設定する準備が整いました。",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "寝る前に加湿器をつけてくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\"/> \n  <detect_object object=\"加湿器\"/>",
+    "clarifying_history": [],
+    "information": "- The user has requested to turn on the humidifier before sleeping.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "寝る前に加湿器をつけてくれる？",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/> \n  <detect_object object=\"加湿器\"/>",
+    "clarifying_history": [],
+    "information": "- The BEDROOM contains a nightstand with several books.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "寝る前に加湿器をつけてくれる？",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/> \n  <detect_object object=\"加湿器\"/>\n  <move_to room_name=\"BEDROOM\"/> \n  <move_to room_name=\"left\"/>",
+    "clarifying_history": [],
+    "information": "- The humidifier is located to the left inside the BEDROOM.",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "眼鏡を拭いて、定位置に戻しておいて",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"眼鏡\"/>\n  <pick_object object=\"眼鏡\"/>\n  <place_object_next_to target=\"sofa\"/>",
+    "clarifying_history": [],
+    "information": "<li>現在はリビングのソファの近くにいます。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "眼鏡を拭いて、定位置に戻しておいて",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"眼鏡\"/>\n  <pick_object object=\"眼鏡\"/>\n  <move_to room_name=\"BEDROOM\"/>\n  <place_object_on target=\"table near BEDROOM\"/>",
+    "clarifying_history": [],
+    "information": "<li>眼鏡を拭いて、BEDROOMの手前のテーブルの上に戻します。</li>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "間接照明をつけて、リラックスできる空間にして",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "- 現在の位置はリビングのソファ近くです。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "間接照明をつけて、リラックスできる空間にして",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "- 現在の位置はリビングのソファ近くです。\n- リビングにはカーペットとソファがありますが、テーブルや本はありません。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "間接照明をつけて、リラックスできる空間にして",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "- 現在の位置はリビングのソファ近くです。\n- リビングにはカーペットとソファがありますが、テーブルや本はありません。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "間接照明をつけて、リラックスできる空間にして",
+    "function_sequence": "<move_to room_name=\"BEDROOM\" />",
+    "clarifying_history": [],
+    "information": "- 現在の位置はリビングのソファ近くです。\n- ベッドルームにはテーブルや本が確認できません。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "間接照明をつけて、リラックスできる空間にして",
+    "function_sequence": "<move_to room_name=\"BEDROOM\" />\n  <detect_object object=\"ランプ\" />",
+    "clarifying_history": [],
+    "information": "- 現在の位置はリビングのソファ近くです。\n- ベッドルームには手前のテーブルがあり、テーブルの上にはランプが置かれている可能性があります。",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "明日の朝、この服をベッドの隣に用意しておいて。",
+    "function_sequence": "<move_to room_name=\"bedroom\"/>",
+    "clarifying_history": [],
+    "information": "- User wants a specific clothing item to be prepared next to the bed for tomorrow morning.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "明日の朝、この服をベッドの隣に用意しておいて。",
+    "function_sequence": "<!-- No function calls yet as I need more information -->",
+    "clarifying_history": [],
+    "information": "- User wants a specific clothing item to be prepared next to the bed for tomorrow morning.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "明日の朝、この服をベッドの隣に用意しておいて。",
+    "function_sequence": "<pick_object object=\"服\"/>\n  <move_to room_name=\"bedroom\"/>\n  <place_object_next_to target=\"ベッド\"/>",
+    "clarifying_history": [],
+    "information": "- User wants the specific clothing item they are currently holding to be placed next to the bed.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "明日の朝、この服をベッドの隣に用意しておいて。",
+    "function_sequence": "<pick_object object=\"服\"/>\n  <move_to room_name=\"BEDROOM\"/>\n  <place_object_next_to target=\"ベッド\"/>",
+    "clarifying_history": [],
+    "information": "- User wants the clothes from the LIVING ROOM to be taken to the BEDROOM and placed next to the bed by tomorrow morning.",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "今日、読んだ本の続きを読み聞かせて。",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "- 現在、リビングのソファ近くにいます。\n- 読んだ本のタイトルや内容については提案されていません。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "今日、読んだ本の続きを読み聞かせて。",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "- BEDROOMの手前のテーブルに本があることを認識していますが、具体的な本のタイトルや数はまだ確認できていません。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "今日、読んだ本の続きを読み聞かせて。",
+    "function_sequence": "<move_to>BEDROOM</move_to>\n  <pick_object>一番上の本</pick_object>",
+    "clarifying_history": [],
+    "information": "- BEDROOMの手前のテーブルの一番上に置いてある本を選択しました。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "今日、読んだ本の続きを読み聞かせて。",
+    "function_sequence": "<move_to>LIVING</move_to>\n  <place_object_next_to>sofa</place_object_next_to>",
+    "clarifying_history": [],
+    "information": "- 一番上の本をLIVINGに持ってきて、ソファの近くに置く準備をしています。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "今日、読んだ本の続きを読み聞かせて。",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "- 現在、リビングのソファ近くにいます。\n- 本の内容や特徴が未確認のため、続きを読み聞かせる準備ができていません。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "今日、読んだ本の続きを読み聞かせて。",
+    "function_sequence": "<move_to>BEDROOM</move_to>\n  <pick_object>一番上の本</pick_object>\n  <move_to>LIVING</move_to>\n  <place_object_next_to>sofa</place_object_next_to>",
+    "clarifying_history": [],
+    "information": "- 行動計画に沿って、本をBEDROOMからLIVINGのソファ近くに持ってくる準備が整いました。",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "窓を開けて、新鮮な空気を入れてくれる？",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"window\"/>",
+    "clarifying_history": [],
+    "information": "- Current location is near the sofa in the LIVING room.\n  - Searching for a window to open.",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "窓を開けて、新鮮な空気を入れてくれる？",
+    "function_sequence": "<move_to>window</move_to>\n  <pick_object>window</pick_object>",
+    "clarifying_history": [],
+    "information": "- 窓は部屋の左の壁にあります。\n  - コーヒーテーブルとテレビ台もあります。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "窓を開けて、新鮮な空気を入れてくれる？",
+    "function_sequence": "<move_to>window</move_to>\n  <place_object_next_to>open</place_object_next_to>",
+    "clarifying_history": [],
+    "information": "- 窓を開けて、新鮮な空気を入れる準備をしています。",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "寝室の観葉植物（シダ）に水をあげて。",
+    "function_sequence": "<move_to>寝室</move_to>\n  <detect_object>シダ</detect_object>\n  <pick_object>水</pick_object>\n  <place_object_on>シダ</place_object_on>",
+    "clarifying_history": [],
+    "information": "<li>ユーザーは寝室の観葉植物（シダ）に水をあげたいと伝えた。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "寝室の観葉植物（シダ）に水をあげて。",
+    "function_sequence": "<move_to>寝室</move_to>\n  <detect_object>シダ</detect_object>\n  <pick_object>水</pick_object>\n  <place_object_on>シダ</place_object_on>",
+    "clarifying_history": [],
+    "information": "<li>寝室に観葉植物（シダ）が存在する。</li>\n  <li>サイドテーブルには4冊の本がある。</li>\n  <li>ユーザーはシダに水をあげたいと伝えた。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "寝室の観葉植物（シダ）に水をあげて。",
+    "function_sequence": "<move_to>キッチン</move_to>\n  <detect_object>コップ</detect_object>\n  <pick_object>水</pick_object>\n  <move_to>寝室</move_to>\n  <place_object_on>シダ</place_object_on>",
+    "clarifying_history": [],
+    "information": "<li>キッチンにはカウンターがある。</li>\n  <li>ユーザーはコップに水を組んで寝室に持って行く指示を出した。</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "寝室の観葉植物（シダ）に水をあげて。",
+    "function_sequence": "<move_to>キッチン</move_to>\n  <detect_object>コップ</detect_object>\n  <pick_object>コップ</pick_object>\n  <pick_object>水</pick_object>\n  <move_to>寝室</move_to>\n  <place_object_on>シダ</place_object_on>",
+    "clarifying_history": [],
+    "information": "<li>コップはキッチンの左奥の角にある扉の中にある。</li>\n  <li>ユーザーはコップに水を組んで寝室に持って行く指示を出した。</li>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "書類を整理して、ファイルボックスに収納して。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"書類\"/>",
+    "clarifying_history": [],
+    "information": "- 現在、ソファの近くにいます。\n  - 書類を探している。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "書類を整理して、ファイルボックスに収納して。",
+    "function_sequence": "<move_to room_name=\"DESK\"/>\n  <detect_object object=\"書類\"/>",
+    "clarifying_history": [],
+    "information": "- 書類はデスクにあります。\n  - デスクが確認できました。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "書類を整理して、ファイルボックスに収納して。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"documents\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは書類を整理し、ファイルボックスに収納したいと考えています。</li>\n    <li>現在、ロボットはリビングのソファ付近にいます。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "書類を整理して、ファイルボックスに収納して。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"documents\"/>\n  <pick_object object=\"documents\"/>\n  <move_to room_name=\"LIVING\"/>\n  <place_object_on target=\"File box\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>書類はデスクにあることが確認されました。</li>\n    <li>ロボットはリビングに移動し、書類をピックアップしてファイルボックスに収納します。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "書類を整理して、ファイルボックスに収納して。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"documents\"/>\n  <pick_object object=\"documents\"/>\n  <move_to room_name=\"LIVING\"/>\n  <place_object_on target=\"Desk\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは書類を机の上に置くように指示しました。</li>\n    <li>ロボットは書類をデスクの上に置きます。</li>\n  </ul>",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "10分後にオンライン会議のリマインダーをセットして。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"clock\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは10分後にオンライン会議のリマインダーをセットしたい。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "10分後にオンライン会議のリマインダーをセットして。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは10分後にオンライン会議のリマインダーをセットしたい。</li>\n    <li>リビングルームにコーヒーテーブルが1つあり、本が2冊あります。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "10分後にオンライン会議のリマインダーをセットして。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <pick_object object=\"clock\"/>\n  <place_object_on target=\"coffee table\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは10分後にオンライン会議のリマインダーをセットしたい。</li>\n    <li>リビングルームにコーヒーテーブルが1つあり、本が2冊あります。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "10分後にオンライン会議のリマインダーをセットして。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは10分後にオンライン会議のリマインダーをセットしたい。</li>\n    <li>リビングルームにコーヒーテーブルが1つあり、本が2冊あります。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "10分後にオンライン会議のリマインダーをセットして。",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>\n  <detect_object object=\"clock\"/>",
+    "clarifying_history": [],
+    "information": "<ul>\n    <li>ユーザーは10分後にオンライン会議のリマインダーを音声で知らせて欲しい。</li>\n    <li>リビングルームにコーヒーテーブルが1つあり、本が2冊あります。</li>\n  </ul>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "<move_to room_name=\"LIVING\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "<pick_object object=\"スマホ\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "<place_object_next_to object=\"スマホ\" target=\"私のところ\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "<place_object_on object=\"スマホ\" target=\"sofa\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "<place_object_on object=\"スマホ\" target=\"sofa\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "sufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "あれを取ってきて",
+    "function_sequence": "",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient",
+    "mode": ""
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switch\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light beside bed\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switch\"/>\n  <push object=\"light switch\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to>BEDROOM</move_to>\n  <detect_object>light</detect_object>",
+    "clarifying_history": [],
+    "information": "<li>Room detected: BEDROOM</li>\n  <li>There is a bedside table present.</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to>BEDROOM</move_to>\n  <detect_object>light</detect_object>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"ライト\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switch\"/>\n  <say text=\"電気を消します。\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switch next to the bed\"/>\n  <say text=\"電気を消します。\"/>\n  <push object=\"light switch next to the bed\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switches next to the bed\"/>\n  <say text=\"両方の電気を消します。\"/>\n  <push object=\"light switch on left side of the bed\"/>\n  <push object=\"light switch on right side of the bed\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switches next to the bed\"/>\n  <say text=\"両方の電気を消します。\"/>\n  <push object=\"light switch on left side of the bed\"/>\n  <push object=\"light switch on right side of the bed\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light switches next to the bed\"/>\n  <say text=\"両方の電気を消します。\"/>\n  <push object=\"light switch on left side of the bed\"/>\n  <push object=\"light switch on right side of the bed\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきのライトを消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n    <detect_object object=\"light\"/>\n    <push object=\"light\"/>\n    <detect_object object=\"light\"/>\n    <push object=\"light\"/>",
+    "clarifying_history": [],
+    "information": "- The robot is in the BEDROOM now.\n    - Both lights by the bed need to be turned off.",
+    "label": "sufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <detect_object object=\"light near the bed\"/>",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\"/>\n  <push object=\"light switch\"/>",
+    "clarifying_history": [],
+    "information": "<li>Room is identified as BEDROOM.</li>\n  <li>There is a bed and a nightstand in the room.</li>\n  <li>There is a light switch near the entrance.</li>",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\" />\n  <detect_object object=\"電気\" />",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\" />\n  <detect_object object=\"左側のライト\" />\n  <detect_object object=\"右側のライト\" />\n  <push object=\"左側のライト\" />\n  <push object=\"右側のライト\" />",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\" />\n  <detect_object object=\"左側のライト\" />\n  <push object=\"左側のライト\" />\n  <detect_object object=\"右側のライト\" />\n  <push object=\"右側のライト\" />",
+    "clarifying_history": [],
+    "information": "",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "BEDROOMのベッドわきの電気を消して",
+    "function_sequence": "<move_to room_name=\"BEDROOM\" />\n  <detect_object object=\"左側のライト\" />\n  <push object=\"左側のライト\" />\n  <detect_object object=\"右側のライト\" />\n  <push object=\"右側のライト\" />",
+    "clarifying_history": [],
+    "information": "",
+    "label": "sufficient"
+  }
+]
