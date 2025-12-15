@@ -1,0 +1,277 @@
+{
+  "テレビを消して": {
+    "house": "house2",
+    "room": "LIVING",
+    "images": [
+      "images\\house2\\LIVING\\00096-rgb.png"
+    ],
+    "tasks": [
+      "テレビを消して"
+    ],
+    "task_text": "テレビを消して"
+  },
+  "窓際の植物に水をあげて": {
+    "house": "house2",
+    "room": "LIVING",
+    "images": [
+      "images\\house2\\LIVING\\00051-rgb.png"
+    ],
+    "tasks": [
+      "窓際の植物に水をあげて"
+    ],
+    "task_text": "窓際の植物に水をあげて"
+  },
+  "窓のカーテンを開けて": {
+    "house": "house2",
+    "room": "LIVING",
+    "images": [
+      "images\\house2\\LIVING\\00051-rgb.png"
+    ],
+    "tasks": [
+      "窓のカーテンを開けて"
+    ],
+    "task_text": "窓のカーテンを開けて"
+  },
+  "パンをトースターに入れて": {
+    "house": "house2",
+    "room": "DINING",
+    "images": [
+      "images\\house2\\DINING\\00007-rgb.png"
+    ],
+    "tasks": [
+      "パンをトースターに入れて"
+    ],
+    "task_text": "パンをトースターに入れて"
+  },
+  "ダイニングテーブルのお皿をキッチンに持って行って": {
+    "house": "house2",
+    "room": "DINING",
+    "images": [
+      "images\\house2\\DINING\\00007-rgb.png"
+    ],
+    "tasks": [
+      "ダイニングテーブルのお皿をキッチンに持って行って"
+    ],
+    "task_text": "ダイニングテーブルのお皿をキッチンに持って行って"
+  },
+  "引き出しから日記を持って来て": {
+    "house": "house7",
+    "room": "BEDROOM",
+    "images": [
+      "images\\house7\\BEDROOM\\00104-rgb.png"
+    ],
+    "tasks": [
+      "引き出しから日記を持って来て"
+    ],
+    "task_text": "引き出しから日記を持って来て"
+  },
+  "鏡を拭いて": {
+    "house": "house7",
+    "room": "BEDROOM",
+    "images": [
+      "images\\house7\\BEDROOM\\00104-rgb.png"
+    ],
+    "tasks": [
+      "鏡を拭いて"
+    ],
+    "task_text": "鏡を拭いて"
+  },
+  "ソファをきれいにして掃除機をかけて": {
+    "house": "house7",
+    "room": "LIVING",
+    "images": [
+      "images\\house7\\LIVING\\00027-rgb.png"
+    ],
+    "tasks": [
+      "ソファをきれいにして掃除機をかけて"
+    ],
+    "task_text": "ソファをきれいにして掃除機をかけて"
+  },
+  "ベッドわきのライトを消して": {
+    "house": "house11",
+    "room": "BEDROOM",
+    "images": [
+      "images\\house11\\BEDROOM\\00051-rgb.png"
+    ],
+    "tasks": [
+      "ベッドわきのライトを消して"
+    ],
+    "task_text": "ベッドわきのライトを消して"
+  },
+  "ベッドの近くの白い本を持って来て": {
+    "house": "house11",
+    "room": "BEDROOM",
+    "images": [
+      "images\\house11\\BEDROOM\\00086-rgb.png"
+    ],
+    "tasks": [
+      "ベッドの近くの白い本を持って来て"
+    ],
+    "task_text": "ベッドの近くの白い本を持って来て"
+  },
+  "木材を暖炉まで持って行って": {
+    "house": "house12",
+    "room": "BARN",
+    "images": [
+      "images\\house12\\BARN\\00047-rgb.png"
+    ],
+    "tasks": [
+      "木材を暖炉まで持って行って"
+    ],
+    "task_text": "木材を暖炉まで持って行って"
+  },
+  "炊飯器のスイッチ入れてきて": {
+    "house": "house2",
+    "room": "DINING",
+    "images": [
+      "images\\house2\\DINING\\00007-rgb.png"
+    ],
+    "tasks": [
+      "炊飯器のスイッチ入れてきて"
+    ],
+    "task_text": "炊飯器のスイッチ入れてきて"
+  },
+  "冷蔵庫の中を掃除して": {
+    "house": "house6",
+    "room": "KITCHEN",
+    "images": [
+      "images\\house6\\KITCHEN\\00017-rgb.png"
+    ],
+    "tasks": [
+      "冷蔵庫の中を掃除して"
+    ],
+    "task_text": "冷蔵庫の中を掃除して"
+  },
+  "食器洗い機を動かして": {
+    "house": "house6",
+    "room": "KITCHEN",
+    "images": [
+      "images\\house6\\KITCHEN\\00017-rgb.png"
+    ],
+    "tasks": [
+      "食器洗い機を動かして"
+    ],
+    "task_text": "食器洗い機を動かして"
+  },
+  "電球を取り替えて": {
+    "house": "house13",
+    "room": "LIVINGROOM",
+    "images": [
+      "images\\house13\\LIVINGROOM\\00113-rgb.png"
+    ],
+    "tasks": [
+      "電球を取り替えて"
+    ],
+    "task_text": "電球を取り替えて"
+  },
+  "ゴミとリサイクルを外に出して": {
+    "house": "house6",
+    "room": "LIVING",
+    "images": [
+      "images\\house6\\LIVING\\00053-rgb.png"
+    ],
+    "tasks": [
+      "ゴミとリサイクルを外に出して"
+    ],
+    "task_text": "ゴミとリサイクルを外に出して"
+  },
+  "髪を洗って、整えてもらえる？": {
+    "house": "house13",
+    "room": "WASHROOM",
+    "images": [
+      "images\\house13\\WASHROOM\\00057-rgb.png"
+    ],
+    "tasks": [
+      "髪を洗って、整えてもらえる？"
+    ],
+    "task_text": "髪を洗って、整えてもらえる？"
+  },
+  "歯を磨いて": {
+    "house": "house13",
+    "room": "WASHROOM",
+    "images": [
+      "images\\house13\\WASHROOM\\00057-rgb.png"
+    ],
+    "tasks": [
+      "歯を磨いて"
+    ],
+    "task_text": "歯を磨いて"
+  },
+  "髭を剃ってくれる？": {
+    "house": "house13",
+    "room": "WASHROOM",
+    "images": [
+      "images\\house13\\WASHROOM\\00057-rgb.png"
+    ],
+    "tasks": [
+      "髭を剃ってくれる？"
+    ],
+    "task_text": "髭を剃ってくれる？"
+  },
+  "趣味に関する情報を調べて教えて": {
+    "house": "house8",
+    "room": "LIVING",
+    "images": [
+      "images\\house8\\LIVING\\00022-rgb.png"
+    ],
+    "tasks": [
+      "趣味に関する情報を調べて教えて"
+    ],
+    "task_text": "趣味に関する情報を調べて教えて"
+  },
+  "新しいテクノロジーの使い方、教えてくれる？": {
+    "house": "house8",
+    "room": "LIVING",
+    "images": [
+      "images\\house8\\LIVING\\00022-rgb.png"
+    ],
+    "tasks": [
+      "新しいテクノロジーの使い方、教えてくれる？"
+    ],
+    "task_text": "新しいテクノロジーの使い方、教えてくれる？"
+  },
+  "今、薬を飲むタイミングか確認してくれる？": {
+    "house": "house7",
+    "room": "LIVING",
+    "images": [
+      "images\\house7\\LIVING\\00027-rgb.png"
+    ],
+    "tasks": [
+      "今、薬を飲むタイミングか確認してくれる？"
+    ],
+    "task_text": "今、薬を飲むタイミングか確認してくれる？"
+  },
+  "薬の時間になったら知らせてね。": {
+    "house": "house7",
+    "room": "LIVING",
+    "images": [
+      "images\\house7\\LIVING\\00027-rgb.png"
+    ],
+    "tasks": [
+      "薬の時間になったら知らせてね。"
+    ],
+    "task_text": "薬の時間になったら知らせてね。"
+  },
+  "少しおしゃべりしようか": {
+    "house": "house8",
+    "room": "LIVING",
+    "images": [
+      "images\\house8\\LIVING\\00022-rgb.png"
+    ],
+    "tasks": [
+      "少しおしゃべりしようか"
+    ],
+    "task_text": "少しおしゃべりしようか"
+  },
+  "家族や友だちに電話をかけてみて": {
+    "house": "house13",
+    "room": "LIVINGROOM",
+    "images": [
+      "images\\house13\\LIVINGROOM\\00113-rgb.png"
+    ],
+    "tasks": [
+      "家族や友だちに電話をかけてみて"
+    ],
+    "task_text": "家族や友だちに電話をかけてみて"
+  }
+}

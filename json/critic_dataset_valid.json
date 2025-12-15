@@ -1,0 +1,14 @@
+[
+  {
+    "instruction": "隣の部屋にある蜜蜂という本を取ってきて",
+    "function_sequence": "<move_to room_name=\"adjacent room\" />\n  <detect_object object=\"蜜蜂\" />",
+    "information": "- 現在、リビングにいます。\n- 隣の部屋に『蜜蜂』という本があります。",
+    "label": "insufficient"
+  },
+  {
+    "instruction": "冷蔵庫から赤いりんごを持ってきて",
+    "function_sequence": "<move_to location=\"kitchen\" />\n  <open_object object=\"冷蔵庫\" />\n  <pick_object object=\"赤いりんご\" />",
+    "information": "- 現在、ダイニングにいます。\n- 冷蔵庫はキッチンにあります。",
+    "label": "sufficient"
+  }
+]
