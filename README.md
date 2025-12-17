@@ -122,7 +122,7 @@ This repository contains the Streamlit application used in the experiment, promp
 ## 🔬 Research Content
 
 This system was developed and used as part of the following research:
-> **"Impact of Dialogue Styles of LLM-Equipped Home Robots on Rapport and Task Performance"**
+> **"Effects of Dialogue Styles on Rapport and Task Performance in LLM-equipped Home Robots"**
 > Kaoru Yoshida, Takumi Yamamoto, Yohei Kobashi, Yuta Sugiura
 
 [Click here for Research Details and App Operation Manual](https://docs.google.com/presentation/d/1xf68kw2iPy8MDEDAiTzxTcADPmQyeoh8rcNLgo7zWf8/edit?usp=sharing)
