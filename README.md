@@ -4,6 +4,108 @@
   <a href="#english">English</a> | <a href="#japanese">日本語</a>
 </p>
 
+<a name="english"></a>
+
+## 📖 Overview
+**CHORD** (Collaborative Home-Robot Dialogue) is a demo application developed to verify how dialogue styles in collaborative tasks with LLM-equipped home robots affect user rapport and task performance. Users can perform household chores (such as setting the table or arranging flowers) collaboratively while conversing in a chat format with a robot agent equipped with GPT-4o-mini.
+
+This repository contains the Streamlit application used in the experiment, prompt designs, and materials related to the experiment.
+
+### System Configuration
+- **Frontend/Backend:** Python / Streamlit
+- **LLM:** OpenAI GPT-4o-mini
+- **Infrastructure:** Google Cloud Platform (Cloud Run)
+- **Database:** Cloud Firestore (State management & Log storage)
+
+## 🔬 Research Content
+
+This system was developed and used as part of the following research:
+> **"Effects of Dialogue Styles on Rapport and Task Performance in LLM-equipped Home Robots"**
+> Kaoru Yoshida, Takumi Yamamoto, Yohei Kobashi, Yuta Sugiura
+
+[Click here for Research Details and App Operation Manual](https://docs.google.com/presentation/d/1xf68kw2iPy8MDEDAiTzxTcADPmQyeoh8rcNLgo7zWf8/edit?usp=sharing)
+
+Currently, many robots (excluding social robots) adopt an efficiency-oriented "Instruction + Response" interaction style, aiming to complete tasks in the shortest possible time.
+However, this style risks producing outputs different from what the user desires or causing unnecessary stress and discomfort for the user.
+As the relationship between robots and humans becomes more intimate and collaborative in the future, we believe interaction design that emphasizes an experience where the robot "moves as the user intends"—rather than just pure efficiency—will become essential.
+The purpose of this study is to clarify what kind of "communication style" contributes to building trust with the user and improving task efficiency in collaborative household work.
+
+## 🤖 Prompt Design
+
+In this study, we control the robot's persona (dialogue style) by rewriting instructions within the system prompt. The definitions of each style are as follows:
+*Note: Please refer to the `prompts/` directory for the actual prompt files.*
+
+## 📝 Survey Questions
+
+In this experiment, evaluations were conducted using the following metrics.
+
+### NASA-TLX (Cognitive Load)
+
+* **Mental Demand**
+  * How much mental and perceptual activity was required (e.g., thinking, deciding, calculating, remembering, looking, searching, etc.) while conversing with the robot?
+* **Physical Demand**
+  * How much physical activity was required (e.g., pushing, pulling, turning, controlling, activating, etc.) while conversing with the robot?
+* **Temporal Demand**
+  * How much time pressure did you feel due to the rate or pace at which the tasks or task elements occurred while conversing with the robot?
+* **Performance**
+  * How successful do you think you were in accomplishing the goals of the task set by yourself while conversing with the robot?
+* **Effort**
+  * How hard did you have to work (mentally and physically) to accomplish your level of performance?
+* **Frustration**
+  * How insecure, discouraged, irritated, stressed, and annoyed did you feel while conversing with the robot?
+
+### Trust Scale
+Participants answered the degree to which they agreed with the following items:
+
+1. I believe this robot is capable.
+2. I trust this robot.
+3. This robot's advice is trustworthy.
+4. I can rely on this robot.
+5. I think this robot's behavior is consistent.
+6. I trust that this robot will do its best when I follow its advice.
+
+### Godspeed Questionnaire Series (Impression of the Robot)
+
+#### Anthropomorphism
+* Fake — Natural
+* Machinelike — Humanlike
+* Unconscious — Conscious
+* Artificial — Lifelike
+* Moving rigidly — Moving elegantly
+
+#### Animacy
+* Dead — Alive
+* Stagnant — Lively
+* Mechanical — Organic
+* Inert — Interactive
+* Apathetic — Responsive
+
+#### Likeability
+* Dislike — Like
+* Unfriendly — Friendly
+* Unkind — Kind
+* Unpleasant — Pleasant
+* Awful — Nice
+
+#### Perceived Intelligence
+* Incompetent — Competent
+* Ignorant — Knowledgeable
+* Irresponsible — Responsible
+* Unintelligent — Intelligent
+* Foolish — Sensible
+
+#### Perceived Safety
+* Anxious — Relaxed
+* Agitated — Calm
+* Quiescent — Surprised
+
+## 🙌 Acknowledgements
+
+This survey was conducted with the cooperation of **LLMATCH, a program by the Matsuo-Iwasawa Lab LLM Community at the University of Tokyo.**
+We would like to express our deepest gratitude.
+
+---
+
 <a name="japanese"></a>
 
 ## 📖 概要
@@ -104,104 +206,3 @@
 本調査には、**東京大学松尾・岩澤研究室 LLM コミュニティのプログラム LLMATCH** にご協力頂きました。
 ここに深く感謝の意を表します。
 
----
-
-<a name="english"></a>
-
-## 📖 Overview
-**CHORD** (Collaborative Home-Robot Dialogue) is a demo application developed to verify how dialogue styles in collaborative tasks with LLM-equipped home robots affect user rapport and task performance. Users can perform household chores (such as setting the table or arranging flowers) collaboratively while conversing in a chat format with a robot agent equipped with GPT-4o-mini.
-
-This repository contains the Streamlit application used in the experiment, prompt designs, and materials related to the experiment.
-
-### System Configuration
-- **Frontend/Backend:** Python / Streamlit
-- **LLM:** OpenAI GPT-4o-mini
-- **Infrastructure:** Google Cloud Platform (Cloud Run)
-- **Database:** Cloud Firestore (State management & Log storage)
-
-## 🔬 Research Content
-
-This system was developed and used as part of the following research:
-> **"Effects of Dialogue Styles on Rapport and Task Performance in LLM-equipped Home Robots"**
-> Kaoru Yoshida, Takumi Yamamoto, Yohei Kobashi, Yuta Sugiura
-
-[Click here for Research Details and App Operation Manual](https://docs.google.com/presentation/d/1xf68kw2iPy8MDEDAiTzxTcADPmQyeoh8rcNLgo7zWf8/edit?usp=sharing)
-
-Currently, many robots (excluding social robots) adopt an efficiency-oriented "Instruction + Response" interaction style, aiming to complete tasks in the shortest possible time.
-However, this style risks producing outputs different from what the user desires or causing unnecessary stress and discomfort for the user.
-As the relationship between robots and humans becomes more intimate and collaborative in the future, we believe interaction design that emphasizes an experience where the robot "moves as the user intends"—rather than just pure efficiency—will become essential.
-The purpose of this study is to clarify what kind of "communication style" contributes to building trust with the user and improving task efficiency in collaborative household work.
-
-## 🤖 Prompt Design
-
-In this study, we control the robot's persona (dialogue style) by rewriting instructions within the system prompt. The definitions of each style are as follows:
-*Note: Please refer to the `prompts/` directory for the actual prompt files.*
-
-## 📝 Survey Questions
-
-In this experiment, evaluations were conducted using the following metrics.
-
-### NASA-TLX (Cognitive Load)
-
-* **Mental Demand**
-  * How much mental and perceptual activity was required (e.g., thinking, deciding, calculating, remembering, looking, searching, etc.) while conversing with the robot?
-* **Physical Demand**
-  * How much physical activity was required (e.g., pushing, pulling, turning, controlling, activating, etc.) while conversing with the robot?
-* **Temporal Demand**
-  * How much time pressure did you feel due to the rate or pace at which the tasks or task elements occurred while conversing with the robot?
-* **Performance**
-  * How successful do you think you were in accomplishing the goals of the task set by yourself while conversing with the robot?
-* **Effort**
-  * How hard did you have to work (mentally and physically) to accomplish your level of performance?
-* **Frustration**
-  * How insecure, discouraged, irritated, stressed, and annoyed did you feel while conversing with the robot?
-
-### Trust Scale
-Participants answered the degree to which they agreed with the following items:
-
-1. I believe this robot is capable.
-2. I trust this robot.
-3. This robot's advice is trustworthy.
-4. I can rely on this robot.
-5. I think this robot's behavior is consistent.
-6. I trust that this robot will do its best when I follow its advice.
-
-### Godspeed Questionnaire Series (Impression of the Robot)
-
-#### Anthropomorphism
-* Fake — Natural
-* Machinelike — Humanlike
-* Unconscious — Conscious
-* Artificial — Lifelike
-* Moving rigidly — Moving elegantly
-
-#### Animacy
-* Dead — Alive
-* Stagnant — Lively
-* Mechanical — Organic
-* Inert — Interactive
-* Apathetic — Responsive
-
-#### Likeability
-* Dislike — Like
-* Unfriendly — Friendly
-* Unkind — Kind
-* Unpleasant — Pleasant
-* Awful — Nice
-
-#### Perceived Intelligence
-* Incompetent — Competent
-* Ignorant — Knowledgeable
-* Irresponsible — Responsible
-* Unintelligent — Intelligent
-* Foolish — Sensible
-
-#### Perceived Safety
-* Anxious — Relaxed
-* Agitated — Calm
-* Quiescent — Surprised
-
-## 🙌 Acknowledgements
-
-This survey was conducted with the cooperation of **LLMATCH, a program by the Matsuo-Iwasawa Lab LLM Community at the University of Tokyo.**
-We would like to express our deepest gratitude.
