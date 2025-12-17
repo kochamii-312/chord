@@ -1,7 +1,7 @@
 import os
 from typing import Set
 import streamlit as st
-from api import build_bootstrap_user_message
+from utils.api import build_bootstrap_user_message
 
 ROOM_TOKENS = ["BEDROOM", "KITCHEN", "DINING", "LIVING", "BATHROOM", "和室", "HALL", "LDK"]
 

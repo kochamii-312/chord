@@ -6,15 +6,14 @@ import streamlit as st
 from pages.consent import require_consent
 from dotenv import load_dotenv
 
-from api import client, build_bootstrap_user_message, CREATING_DATA_SYSTEM_PROMPT
-from jsonl import (
+from utils.api import client, build_bootstrap_user_message, CREATING_DATA_SYSTEM_PROMPT
+from archive.jsonl import (
     remove_last_jsonl_entry,
     save_conversation_history_to_firestore,
     save_jsonl_entry,
     show_jsonl_block,
 )
-from move_functions import move_to, pick_object, place_object_next_to, place_object_on
-from run_and_show import run_plan_and_show, show_spoken_response, show_function_sequence, show_information
+from utils.run_and_show import run_plan_and_show, show_spoken_response, show_function_sequence, show_information
 from tasks.ui import render_random_room_task, reset_random_room_task
 
 load_dotenv()

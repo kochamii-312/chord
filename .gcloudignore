@@ -2,8 +2,7 @@
 .gcloudignore
 .git
 .gitignore
-
-
+__pycache__/*
 /models/*
 /pages/images_and_tasks.py
 /pages/pre-experiment.py

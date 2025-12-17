@@ -12,7 +12,7 @@ import streamlit as st
 from typing import Any, List, Optional, Tuple
 from dotenv import load_dotenv
 from utils.firebase_utils import save_document
-from api import client
+from utils.api import client
 
 load_dotenv()
 

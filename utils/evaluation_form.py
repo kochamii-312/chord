@@ -6,7 +6,7 @@ from typing import Dict, Tuple
 
 import streamlit as st
 
-from jsonl import save_experiment_result
+from archive.jsonl import save_experiment_result
 
 SUS_OPTIONS: Tuple[Tuple[str, int], ...] = (
     ("とても当てはまる (5)", 5),

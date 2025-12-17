@@ -5,7 +5,7 @@ from typing import Dict, List
 import streamlit as st
 from dotenv import load_dotenv
 
-from image_task_sets import (
+from archive.image_task_sets import (
     build_task_set_choices,
 
     delete_image_task_set,

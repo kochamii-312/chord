@@ -1,7 +1,7 @@
 import streamlit as st
 import re
-from strips import parse_step
-from move_functions import move_to, pick_object, place_object_next_to, place_object_on, detect_object
+from utils.strips import parse_step
+from archive.move_functions import move_to, pick_object, place_object_next_to, place_object_on, detect_object
 
 def show_function_sequence(reply: str):
     """<FunctionSequence> ... </FunctionSequence> をコードブロックで表示"""

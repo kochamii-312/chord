@@ -6,25 +6,18 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from dotenv import load_dotenv
 
-from api import client, SYSTEM_PROMPT, build_bootstrap_user_message
-from jsonl import (
+from utils.api import client, SYSTEM_PROMPT, build_bootstrap_user_message
+from archive.jsonl import (
     predict_with_model,
     save_conversation_history_to_firestore,
     save_pre_experiment_result,
 )
-from move_functions import (
-    move_to,
-    pick_object,
-    place_object_next_to,
-    place_object_on,
-)
-from run_and_show import (
+from utils.run_and_show import (
     run_plan_and_show,
     show_spoken_response,
     show_function_sequence,
 )
-from run_and_show import show_provisional_output
-from strips import extract_between, strip_tags
+from utils.strips import extract_between, strip_tags
 from tasks.ui import render_random_room_task, reset_random_room_task
 
 load_dotenv()

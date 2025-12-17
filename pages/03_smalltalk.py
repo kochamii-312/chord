@@ -14,22 +14,20 @@ from pages.consent import (
 )
 from dotenv import load_dotenv
 
-from api import build_bootstrap_user_message, client
-from jsonl import (
+from utils.api import build_bootstrap_user_message, client
+from archive.jsonl import (
     record_task_duration,
     save_conversation_history_to_firestore
 )
-from move_functions import move_to, pick_object, place_object_next_to, place_object_on
-from run_and_show import run_plan_and_show, show_spoken_response, show_function_sequence
-from image_task_sets import extract_task_lines
-from two_classify import prepare_data  # 既存関数を利用
-from esm import ExternalStateManager
+from utils.run_and_show import show_function_sequence
+from archive.image_task_sets import extract_task_lines
+from utils.esm import ExternalStateManager
 from utils.evaluation_form import render_standard_evaluation_form
 
 PROMPT_GROUP = "smalltalk"
 NEXT_PAGE = None
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROMPT_TASKINFO_PATH = REPO_ROOT / "json" / "prompt_taskinfo_sets.yaml"
+PROMPT_TASKINFO_PATH = REPO_ROOT / "prompts" / "prompt_taskinfo_sets.yaml"
 _PROMPT_TASKINFO_CACHE: dict[str, dict[str, str]] | None = None
 
 IMAGE_TITLE_MAP: dict[str, list[str]] = {
@@ -240,21 +238,6 @@ def finalize_and_render_plan(label: str):
         json.dumps(st.session_state.conv_log, ensure_ascii=False, indent=2),
         language="json"
     )
-
-def _build_text_for_model(instruction: str, function_sequence: str, information: str) -> str:
-    # 学習時(two_classify.py)の prepare_data と同じ接頭辞・結合順に合わせる
-    parts = []
-    if instruction.strip():
-        parts.append(f"Instruction: {instruction.strip()}")
-    if function_sequence.strip():
-        parts.append(f"FunctionSequence: {function_sequence.strip()}")
-    if information.strip():
-        parts.append(f"Information: {information.strip()}")
-    return " | ".join(parts)
-
-def _extract_between(tag: str, text: str) -> str | None:
-    m = re.search(fr"<{tag}>([\s\S]*?)</{tag}>", text or "", re.IGNORECASE)
-    return m.group(1).strip() if m else ""
 
 def app():
     # require_consent()
@@ -530,7 +513,7 @@ def app():
         col1.metric("現在地", location.replace("_", " ").title())
         col2.metric("掴んでいる物", str(holding) if holding else "なし")
 
-        st.divider()  # 区切り線
+        st.divider()
 
         # --- 2. 環境の状態 ---
         st.markdown("##### 🏠 環境（場所ごとのアイテム）")
