@@ -125,7 +125,7 @@ This system was developed and used as part of the following research:
 > **"Impact of Dialogue Styles of LLM-Equipped Home Robots on Rapport and Task Performance"**
 > Kaoru Yoshida, Takumi Yamamoto, Yohei Kobashi, Yuta Sugiura
 
-[Click here for Research Details and App Operation Manual](https://docs.google.com/presentation/d/170fsT62Pm_U1_FMcTsrCM27pVbMOy9_ZlhFZP5KOkxw/edit?usp=sharing)
+[Click here for Research Details and App Operation Manual](https://docs.google.com/presentation/d/1xf68kw2iPy8MDEDAiTzxTcADPmQyeoh8rcNLgo7zWf8/edit?usp=sharing)
 
 Currently, many robots (excluding social robots) adopt an efficiency-oriented "Instruction + Response" interaction style, aiming to complete tasks in the shortest possible time.
 However, this style risks producing outputs different from what the user desires or causing unnecessary stress and discomfort for the user.
